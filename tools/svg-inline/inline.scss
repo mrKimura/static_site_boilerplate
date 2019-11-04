@@ -1,0 +1,14 @@
+@mixin inline-svg($svg-name, $inline-color: false, $modifier: false) {
+  $modifier-full: '';
+  @if ($modifier) {
+   $modifier-full: '--#{$modifier}'
+  }
+  .#{$svg-name}#{$modifier-full} {
+    @if ($inline-color) {
+      background: svg-load('inline/#{$svg-name}.svg', fill=#{$inline-color}) center no-repeat;
+    } @else {
+      background: svg-load('inline/#{$svg-name}.svg') center no-repeat;
+    }
+  }
+}
+

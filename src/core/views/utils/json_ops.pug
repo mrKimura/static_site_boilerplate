@@ -1,0 +1,13 @@
+-
+  function getJson(path) {
+  let json = {}
+  try {
+    json = JSON.parse(readFileSync(path, `utf-8`))
+  } catch (e) {}
+  return json
+  }
+-
+  function getCss(name) {
+    const path = `./src/features/${name}/${name}-css.json`
+    return getJson(path)
+  }
