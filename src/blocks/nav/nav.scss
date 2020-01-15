@@ -1,0 +1,24 @@
+@import '../../core/styles/core';
+
+.nav {
+  display: flex;
+}
+
+.nav-content {
+  display: flex;
+}
+
+.nav-item {
+  display: flex;
+  transition: color 0.2s;
+
+  &:hover {
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,19 @@
+@import '../../core/styles/core';
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+  }
+
+  &:disabled {
+  }
+
+  &:active {
+  }
+}

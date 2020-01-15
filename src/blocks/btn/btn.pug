@@ -1,0 +1,28 @@
+//+btn({
+//  isButton: true,
+//  className: '111',
+//  dataId: 'form111'
+//})
+
+mixin btn(props)
+  -
+    const {
+      isButton,
+      className,
+      dataId = 'form'
+    } = props
+
+    const btnClass = ['btn', className]
+
+  if isButton
+    button(
+      class=btnClass
+      type='submit'
+    )
+      block
+  else
+    div(
+      class=btnClass
+      data-id=dataId
+    )
+      block

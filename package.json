@@ -1,19 +1,23 @@
 {
-  "name": "site",
+  "name": "starter-template",
   "version": "1.0.0",
-  "description": "static site boilerplate",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "parcel src/*.pug",
-    "build": "parcel build src/*.pug --no-source-maps",
-    "feature": "node tools/create_node.js",
-    "inline": "parcel build tools/svg-inline/inline.scss --no-source-maps"
-  },
   "keywords": [],
-  "author": "Andrei Francev, andrewfrancev@gmail.com",
+  "author": "",
   "license": "ISC",
   "staticFiles": {
-    "watcherGlob": "**"
+    "staticPath": "src/assets/static"
+  },
+  "scripts": {
+    "dev": "npm run clean && parcel src/*.pug",
+    "build": "npm run clean && parcel build src/*.pug --experimental-scope-hoisting --no-source-maps",
+    "feat": "node tools/create-feature.js",
+    "s-feat": "node tools/create-feature-scripts.js",
+    "block": "node tools/create-block.js",
+    "s-block": "node tools/create-block-scripts.js",
+    "inline": "parcel build tools/svg-inline/inline.scss --no-source-maps",
+    "clean": "rimraf .cache dist"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.1",
@@ -24,13 +28,14 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-nuke-dist": "^1.0.1",
     "parcel-plugin-static-files-copy": "^2.2.1",
     "postcss-inline-svg": "^4.1.0",
     "postcss-modules": "^1.4.1",
     "prettier": "^1.18.2",
     "pug": "^2.0.4",
+    "rimraf": "^3.0.0",
     "sass": "^1.23.2"
   },
-  "dependencies": {}
+  "dependencies": {
+  }
 }

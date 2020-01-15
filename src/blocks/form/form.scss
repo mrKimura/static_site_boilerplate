@@ -1,0 +1,51 @@
+@import '../../core/styles/core';
+
+@function cross($color: 'white') {
+  @return url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$color}'%3E%3Cpath d='M16 1.2L14.8 0 8 6.8 1.2 0 0 1.2 6.8 8 0 14.8 1.2 16 8 9.2l6.8 6.8 1.2-1.2L9.2 8z'/%3E%3C/svg%3E")
+    center no-repeat;
+}
+
+
+.form {
+  display: flex;
+  width: 366px;
+  padding: 26px;
+  background-color: white;
+  flex-direction: column;
+  z-index: 105;
+  position: relative;
+  @include popup;
+
+  & .close {
+    background: cross('%23bcbcbc');
+    position: absolute;
+    flex-shrink: 0;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  & .formBtn {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  & .formInput {
+    margin-bottom: 12px;
+  }
+}
+
+.response {
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  @include popup;
+
+}

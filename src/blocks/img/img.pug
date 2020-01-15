@@ -1,0 +1,37 @@
+//+img({
+//  file: 'logo.svg',
+//  alt: '',
+//  className: 'className',
+//  quantity: 1,
+//  folder: 'assets',
+//})
+
+mixin img(props)
+  picture
+    -
+      const {
+        file,
+        alt = '',
+        className,
+        quantity = 1,
+        folder = 'assets',
+      } = props
+
+      const [name, ext] = file.split('.')
+      const picturePath = `${folder}/img`
+
+      const allSet = [`${picturePath}/${name}.${ext}`]
+
+      for (let i = 2; i <= quantity; i++) {
+        allSet.push(`${picturePath}/${name}@${i}x.${ext}`)
+      }
+
+      const srcSet = allSet.join(', ')
+
+    source(srcset=srcSet type=`image/${ext}`)
+    img(
+      src=allSet[0]
+      alt=alt
+      class=['img', className]
+    )
+

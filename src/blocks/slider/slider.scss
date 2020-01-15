@@ -1,0 +1,33 @@
+@import '../../core/styles/core';
+//@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+.glide {
+  position: relative;
+
+  &__arrows {
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: flex;
+    outline: none;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    outline: none;
+    pointer-events: all;
+
+    &--right {
+      &:hover {
+      }
+    }
+
+    &--left {
+      &:hover {
+      }
+    }
+  }
+}

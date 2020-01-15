@@ -31,7 +31,7 @@ yarn-error.log*
 testem.log
 yarn.lock
 .env
-package-lock.json
+/.cache
 
 # System Files
 .DS_Store

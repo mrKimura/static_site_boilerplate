@@ -1,0 +1,47 @@
+mixin input(props)
+  // -
+    +input({
+      label: 'Some Text Label',
+      classNames: ['class1', 'class2'],
+      placeholder: 'Some text',
+      disabled: true,
+      name: 'test',
+      masked: 'phone',
+      textarea: false,
+    })
+  -
+    const {
+      label,
+      classNames,
+      type = 'text',
+      placeholder = false,
+      disabled = false,
+      textarea = false,
+      masked,
+      name = `${Math.random()}`,
+    } = props
+
+    const fieldClass = classNames ? ['field', ...classNames] : 'field'
+
+  label(
+    class=fieldClass
+  )
+    if label
+      span.label #{label}
+
+    unless textarea
+      input(
+        type=type
+        class='input'
+        disabled=disabled
+        id=`input_${name}`
+        placeholder=placeholder
+        data-mask=masked
+      )
+    else
+      textarea(
+        class=['input', 'textarea']
+        disabled=disabled
+        id=`input_${name}`
+        placeholder=placeholder
+      )

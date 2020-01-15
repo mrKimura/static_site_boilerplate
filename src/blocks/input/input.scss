@@ -1,0 +1,42 @@
+@import '../../core/styles/core';
+
+.field {
+  $borders-color: black;
+  $label-text-color: black;
+  $input-text-color: black;
+  $placeholder-text-color: transparentize(black, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & .label {
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: $label-text-color;
+  }
+
+  & .input {
+    height: 34px;
+    padding: 8px 16px 9px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 16px;
+    color: $input-text-color;
+    background-color: unset;
+    box-shadow: 0 0 2px black;
+    font-family: inherit;
+
+    &.textarea {
+      resize: none;
+      height: 98px;
+      box-shadow: 0 0 2px black;
+      border: none;
+    }
+
+    &::placeholder {
+      font-size: 15px;
+      color: $placeholder-text-color;
+    }
+  }
+}

@@ -1,9 +1,12 @@
 module.exports = {
   modules: true,
   plugins: {
-    autoprefixer: {},
+    autoprefixer: {
+      grid: 'autoplace',
+      supports: false,
+    },
     'postcss-modules': {
-      globalModulePaths: ['./src/core/styles', './tools/svg-inline'],
+      globalModulePaths: ['./src/core/styles', './tools/svg-inline', './src/blocks'],
       getJSON: function(cssFileName, json) {
         const fs = require('fs')
         const path = require('path')

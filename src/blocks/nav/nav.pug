@@ -1,0 +1,26 @@
+-
+  const navItems = [
+    {
+      nav: '',
+      link: '',
+      data: 'link'
+    },
+  ]
+
+mixin nav()
+  nav(class=['nav'])
+    ul(class=['nav-content'])
+      each item in navItems
+        li.nav-item
+          if item.link
+            a(
+              href=item.link
+              class='nav-link'
+              data-id=item.data
+            ) #{item.nav}
+          else
+            span(
+              class='nav-link'
+              data-id=item.data
+            ) #{item.nav}
+

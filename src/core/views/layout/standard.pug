@@ -1,16 +1,15 @@
+include ../data/data
 include ../utils/index
-- const data = getJson('./src/data/site_config.json')
+include ../../../blocks/index
 
 doctype html
 html(lang="ru")
   head
-    include ../partials/head
+    include ../head/head
     block title
   body
-    header#header.header
-      block header
+    block header
     main#main.main
       block content
-    footer#footer.footer
-      block footer
+    block footer
     script(src="index.js")

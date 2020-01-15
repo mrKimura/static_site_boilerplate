@@ -1,0 +1,38 @@
+mixin form()
+  div(
+    id='form'
+    class='form'
+  )
+    div(
+      id='form_close_btn'
+      class='close'
+    )
+    +input({
+      label: 'Имя',
+      placeholder: 'Ваше имя',
+      name: 'name',
+      classNames: ['formInput'],
+    })
+    +input({
+      label: 'E-mail',
+      placeholder: 'Ваш e-mail',
+      name: 'mail',
+      type: 'mail',
+      masked: 'mail',
+      classNames: ['formInput'],
+    })
+    +input({
+      label: 'Телефон',
+      placeholder: 'Ваш телефон',
+      name: 'phone',
+      type: 'tel',
+      masked: 'phone',
+      classNames: ['formInput'],
+    })
+    +input({
+      label: 'Сообщение',
+      name: 'message',
+      textarea: true,
+      classNames: ['formInput'],
+    })
+    +btn(false, true, 'formBtn') Отправить

@@ -23,6 +23,15 @@ button::-moz-focus-inner {
     padding: 0;
 }
 
+input {
+  border: unset;
+}
+
+fieldset {
+  margin: 0;
+  border: unset;
+}
+
 //link
 a {
     color: unset;
@@ -39,4 +48,14 @@ body {
 main {
     display: flex;
     flex-direction: column;
+}
+
+:focus {
+    outline: unset;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

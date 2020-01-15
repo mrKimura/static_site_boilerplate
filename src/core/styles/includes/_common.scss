@@ -1,8 +1,22 @@
 :root {
 }
 
-//@include mq-min($??????????) {
-//    :root {
-//    }
+//@include mq-min($mq-tablet) {
+//  :root {
+//  }
 //}
 
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  //width: 1400px;
+}
+
+.main {
+}

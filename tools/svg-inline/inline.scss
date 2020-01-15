@@ -3,7 +3,7 @@
   @if ($modifier) {
    $modifier-full: '--#{$modifier}'
   }
-  .#{$svg-name}#{$modifier-full} {
+  .icon-#{$svg-name}#{$modifier-full} {
     @if ($inline-color) {
       background: svg-load('inline/#{$svg-name}.svg', fill=#{$inline-color}) center no-repeat;
     } @else {
@@ -12,3 +12,4 @@
   }
 }
 
+//@include inline-svg('111')

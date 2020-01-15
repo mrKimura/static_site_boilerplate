@@ -1,0 +1,24 @@
+mixin slider(name)
+  div(
+    id=`#{name}_slider`
+    class=['glide', `#{name}-slider`]
+  )
+    div(
+      class='glide__track'
+      data-glide-el='track'
+    )
+      ul(class=[`#{name}-slides`])
+        //li(class=[`#{name}-slide`])
+        block
+
+    div(class=['glide__arrows']
+      data-glide-el="controls"
+    )
+      button(
+        class=['glide__arrow', 'glide__arrow--left']
+        data-glide-dir='<'
+      )
+      button(
+        class=['glide__arrow', 'glide__arrow--right']
+        data-glide-dir='>'
+      )
